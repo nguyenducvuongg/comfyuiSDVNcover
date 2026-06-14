@@ -26,7 +26,7 @@ pip install ultralytics
 
 git clone https://github.com/cubiq/ComfyUI_InstantID
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/Basecontrolnet/resolve/main/InstantID/adapter_instant_id_sdxl.bin -d /content/ComfyUI/models/instantid -o ip-adapter.bin
-git clone https://huggingface.co/DIAMONIK7777/antelopev2 /content/ComfyUI/models/insightface/models/antelopev2
+if [ ! -d /content/ComfyUI/models/insightface/models/antelopev2 ] || [ -z "$(ls -A /content/ComfyUI/models/insightface/models/antelopev2)" ]; then git clone https://huggingface.co/DIAMONIK7777/antelopev2 /content/ComfyUI/models/insightface/models/antelopev2; fi
 
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/ComfyUI/models/vae -o VAE84.vae.pt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-UltraSharp.ckpt -d /content/ComfyUI/models/upscale_models -o 4x-UltraSharp.pth
