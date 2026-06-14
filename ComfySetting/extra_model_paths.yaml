@@ -11,6 +11,7 @@ comfyui:
     upscale_models: upscale_models
     vae: vae
     inpaint: inpaint
+    loras: loras
     checkpoints: checkpoints
     insightface: insightface
     facerestore_models: facerestore_models
