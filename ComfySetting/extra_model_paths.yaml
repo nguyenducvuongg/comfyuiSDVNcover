@@ -9,6 +9,7 @@ comfyui:
                  unet
     diffusers: diffusers
     upscale_models: upscale_models
+    latent_upscale_models: latent_upscale_models
     vae: vae
     inpaint: inpaint
     loras: loras
